@@ -1,0 +1,178 @@
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+main {
+    height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: hsl(215, 51%, 70%)
+}
+
+.container {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 16px;
+    background-color: hsl(215, 51%, 16%);
+    width: 325px;
+    line-height: 25px;
+    overflow: hidden;
+    box-shadow: -30px 10px 20px rgba(0, 0, 0, 0.2), 30px 10px 20px rgba(0, 0, 0, 0.2), 0 30px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-box {
+    padding: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.overlay {
+    border-radius: 8px;
+    position: absolute;
+    top: 5%;
+    bottom: 0;
+    left: 5%;
+    right: 1%;
+    height: 278px;
+    width: 278px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: hsl(178, 100%, 50%);
+}
+
+.image-box:hover .overlay {
+    opacity: 0.5;
+}
+
+.over-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.title {
+    font-family: 'Outfit', sans-serif;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    width: 100%;
+    padding: 0.5rem 2rem 1rem 1rem;
+}
+
+.title:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.description {
+    font-weight: 300;
+    width: 100%;
+    padding: 0 0 1rem 1rem;
+}
+
+.eth-nr {
+    display: flex;
+    font-weight: 400;
+    color: hsl(178, 100%, 50%);
+    width: 48%;
+    padding: 0 0 0 1rem;
+    line-height: 18px;
+}
+
+.eth-nr:before {
+    content: url("images/icon-ethereum.svg");
+    padding-right: 0.5rem
+}
+
+.days-left {
+    display: flex;
+    font-weight: 300;
+    width: 52%;
+    padding: 0 0 1rem 3rem;
+    line-height: 17px;
+}
+
+.days-left:before {
+    content: url("images/icon-clock.svg");
+    padding-right: 0.5rem;
+}
+
+.creators {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.creators:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 90%;
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.creator-img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 35px;
+}
+
+.creator {
+    width: 80%;
+    line-height: 36px;
+}
+
+
+.creator-author {
+    color: hsl(0, 0%, 100%);
+}
+
+.creator-author:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
